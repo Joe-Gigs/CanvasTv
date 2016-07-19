@@ -2,11 +2,14 @@ html{
 	width: 100%;
 	height: 100%;
 }
+
 #greet{
 	width: 250px;
 	height: 18px;
 	border: 1px solid black;
 	margin-top: 10px;
+	background-color: grey;
+	color: #16dfe6;
 }
 
 #myCanvas {
@@ -16,4 +19,5 @@ html{
 #select {
 	width: 20px;
 }
+
 

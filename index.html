@@ -10,9 +10,8 @@
 	<body>
 	 <form name="tv" action="">
          Select Channel:<input type="text" id="select" maxlength="2"/>
-         <input type="button" value="Select" onclick="rememberChannel()";/>
-         <input type="button" value="Turn on" onclick="draw()";/>
-         <input type="button" value="Turn off" onclick="clear()";/>
+         <input type="button" id="remember" value="Select" onclick="rememberChannel()";/>
+         <input type="button" id="turn_on" value="Power" onclick="draw()";/>
       </form>
   	      <div id="greet"></div>
   	      <canvas id="myCanvas" width="400" height="400"></canvas>
