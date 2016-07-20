@@ -1,3 +1,5 @@
+var enabled = true;
+
 window.onload = function() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
@@ -11,10 +13,16 @@ window.onload = function() {
 function draw() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
+
+    if (enabled == true){
     canvas.style.backgroundColor = "white";
     document.getElementById('greet').innerHTML = "Welcome";
     static();
     loop();
+    console.log('true');
+    } else {
+        canvas.style.backgroundColor = "black";
+    }
 };
 
 function static() {
@@ -34,11 +42,9 @@ function static() {
 };
 
 function clear() {
+    enabled == false;
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-
-    void ctx.clearRect(x, y, width, height);
-    console.log('off');
 };
 
 function rememberChannel() {
@@ -85,9 +91,8 @@ function checkChannel() {
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case '4':
-            draw();
-            canvas.style.backgroundColor = "white";
-            document.getElementById('greet').innerHTML = "You are viewing channel TEST"; // need to clear canvas
+            floralShoppe();
+            document.getElementById('greet').innerHTML = "A E S T H E T I C S "; // need to clear canvas
             break
         default:
             document.getElementById('greet').innerHTML = ":D";
@@ -97,3 +102,12 @@ function checkChannel() {
 function turnOff() {
     location.reload(true)
 };
+
+function floralShoppe(){
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    var img = new Image();
+    img.src = 'IMG/rsz_floral_shoppe.jpg';
+    ctx.drawImage(img, 0, 0);
+};
+

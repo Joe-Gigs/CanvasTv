@@ -5,7 +5,7 @@ html{
 
 #greet{
 	width: 250px;
-	height: 18px;
+	height: 30px;
 	border: 1px solid white;
 	padding-left: 0;
     padding-right: 0;
@@ -30,6 +30,7 @@ html{
 .tvControl{
     text-align: center;
 }
+
 
 
 
