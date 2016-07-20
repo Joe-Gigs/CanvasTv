@@ -8,12 +8,13 @@
 	<title></title>
 </head>
 	<body>
-	 <form name="tv" action="">
+	 <form name="tvControl" class="tvControl" action="">
          Select Channel:<input type="text" id="select" maxlength="2"/>
          <input type="button" id="remember" value="Select" onclick="rememberChannel()";/>
-         <input type="button" id="turn_on" value="Power" onclick="draw()";/>
+         <input type="button" id="turn_on" value="On" onclick="draw()";/>
+         <input type="button" id="turn_off" value="Off" onclick="turnOff()";/>
       </form>
   	      <div id="greet"></div>
-  	      <canvas id="myCanvas" width="400" height="400"></canvas>
+  	      <canvas id="myCanvas" width="600" height="400"></canvas>
 	</body>
 </html>
