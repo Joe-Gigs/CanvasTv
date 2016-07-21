@@ -7,7 +7,7 @@ window.onload = function() {
 
     canvas.style.backgroundColor = "black";
     console.log(current_channel);
-    document.getElementById('greet').innerHTML = "Off :<";
+    document.getElementById('greet').innerHTML = "Off :(";
 };
 
 function draw() {
@@ -41,17 +41,12 @@ function static() {
     ctx.putImageData(idata, 0, 0);
 };
 
-function clear() {
-    enabled == false;
-    var canvas = document.getElementById('myCanvas');
-    var ctx = canvas.getContext('2d');
-};
-
 function rememberChannel() {
     var channel = document.getElementById('select').value;
-    Cookies.set('channel_select', channel);
     var current_channel = Cookies.get('channel_select');
     var num = console.log(current_channel);
+
+    Cookies.set('channel_select', channel);
     checkChannel();
 };
 
@@ -76,21 +71,26 @@ function checkChannel() {
 
     switch (current_channel) {
         case '1':
+            canvas.style.backgroundImage = "";
             draw();
             canvas.style.backgroundColor = 'yellow';
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case '2':
+            canvas.style.backgroundImage = "";
             draw();
             canvas.style.backgroundColor = 'blue';
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case '3':
+            canvas.style.backgroundImage = "";
             draw();
             canvas.style.backgroundColor = 'red';
+            canvas.style.color = 'black';
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case '4':
+            draw();
             canvas.style.backgroundColor = 'black';
             floralShoppe();
             document.getElementById('greet').innerHTML = "A E S T H E T I C S "; // need to clear canvas
@@ -101,20 +101,21 @@ function checkChannel() {
 };
 
 function turnOff() {
-    // location.reload(true) // shitty way to do it
+    // location.reload(true)
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
 
     canvas.style.backgroundColor = 'black';
-    document.getElementById('greet').innerHTML = "Off :<";
+    canvas.style.backgroundImage = "";
+    document.getElementById('greet').innerHTML = "Off :(";
 
 };
 
 function floralShoppe(){
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-    var img = new Image();
-    img.src = 'IMG/rsz_floral_shoppe.jpg';
-    ctx.drawImage(img, 0, 0);
+   
+    canvas.style.backgroundImage = "url('IMG/01.gif')";
+    canvas.style.backgroundSize = "10px 100px)";
 };
 
