@@ -91,6 +91,7 @@ function checkChannel() {
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case '4':
+            canvas.style.backgroundColor = 'black';
             floralShoppe();
             document.getElementById('greet').innerHTML = "A E S T H E T I C S "; // need to clear canvas
             break
@@ -100,7 +101,13 @@ function checkChannel() {
 };
 
 function turnOff() {
-    location.reload(true)
+    // location.reload(true) // shitty way to do it
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    canvas.style.backgroundColor = 'black';
+    document.getElementById('greet').innerHTML = "Off :<";
+
 };
 
 function floralShoppe(){
