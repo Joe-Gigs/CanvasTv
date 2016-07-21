@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-	<link rel="stylesheet" type="text/css" href="CSS/hover-min.css">
-	<script src="JS/cookies.js"></script>
-	<script src="JS/main.js"></script>
-	<title></title>
-</head>
-	<body>
-	 <form name="tvControl" class="tvControl" action="">
+   <head>
+      <link rel="stylesheet" type="text/css" href="CSS/style.css">
+      <link rel="stylesheet" type="text/css" href="CSS/hover-min.css">
+      <script src="JS/cookies.js"></script>
+      <script src="JS/main.js"></script>
+      <title></title>
+   </head>
+   <body>
+      <canvas id="myCanvas" width="600" height="400"></canvas>
+       <div id="greet"></div>
+      <form id="tvControl">
          Select Channel:<input type="text" id="select" maxlength="2"/>
          <input type="button" id="remember" value="Select" onclick="rememberChannel()";/>
          <input type="button" id="turn_on" value="On" onclick="draw()";/>
          <input type="button" id="turn_off" value="Off" onclick="turnOff()";/>
+         <input type="button" id="up" value="Up" onclick="channelUp()";/>
+         <input type="button" id="up" value="Down" onclick="channelDown()";/>
       </form>
-  	      <div id="greet"></div>
-  	      <canvas id="myCanvas" width="600" height="400"></canvas>
-	</body>
+   </body>
 </html>

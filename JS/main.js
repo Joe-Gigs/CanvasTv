@@ -19,7 +19,7 @@ function draw() {
     document.getElementById('greet').innerHTML = "Welcome";
     static();
     loop();
-    console.log('true');
+    // console.log('true');
     } else {
         canvas.style.backgroundColor = "black";
     }
@@ -63,7 +63,7 @@ function loop() {
     static(ctx);
     requestAnimationFrame(loop);
 };
-
+//Will render different things on canvas depending on the channel the user is on
 function checkChannel() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
@@ -92,9 +92,13 @@ function checkChannel() {
         case '4':
             draw();
             canvas.style.backgroundColor = 'black';
-            floralShoppe();
+            canvas.style.backgroundImage = "url('IMG/01.gif')";
             document.getElementById('greet').innerHTML = "A E S T H E T I C S "; // need to clear canvas
             break
+        case '5':
+            canvas.style.backgroundColor = null
+            canvas.style.backgroundImage = "url('IMG/jtrain.jpg')";
+            break;
         default:
             document.getElementById('greet').innerHTML = ":D";
     }
@@ -111,11 +115,25 @@ function turnOff() {
 
 };
 
-function floralShoppe(){
-    var canvas = document.getElementById('myCanvas');
-    var ctx = canvas.getContext('2d');
-   
-    canvas.style.backgroundImage = "url('IMG/01.gif')";
-    canvas.style.backgroundSize = "10px 100px)";
+var count = 0; //possible new channel system. 
+
+function channelUp() {
+    var current_channel = Cookies.get('channel_select');
+
+    current_channel++;
+    count++;
+    console.log(count);
+    // console.log(current_channel);
 };
+
+function channelDown() {
+    var current_channel = Cookies.get('channel_select');
+
+    current_channel--;
+    count--;
+    console.log(count);
+    // console.log(current_channel);
+};
+
+
 

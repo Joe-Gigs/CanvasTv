@@ -3,8 +3,8 @@ html{
 	height: 100%;
 }
 
-#greet{
-	width: 250px;
+#greet {
+	width: 500px;
 	height: 30px;
 	border: 1px solid white;
 	padding-left: 0;
@@ -14,6 +14,7 @@ html{
 	background-color: black;
 	color: #00a601;
 	font-size: 20px;
+	text-align: center;
 }
 
 #myCanvas {
@@ -27,8 +28,11 @@ html{
 	width: 20px;
 }
 
-.tvControl{
+#tvControl{
     text-align: center;
+    border: 3px solid black;
+    width: 600px;
+    margin: 0 auto;
 }
 
 
