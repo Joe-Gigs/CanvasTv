@@ -117,19 +117,19 @@ function turnOff() {
 };
 
 function channelUp() {
-    var current_channel = channelCount.value;
+    var current_channel = channelCount;
 
-    channelCount++;
-    console.log(channelCount);
+    current_channel++;
+    console.log(current_channel);
     checkChannel();
 
 };
 
 function channelDown() {
-    var current_channel = channelCount.value;
+    var current_channel = channelCount;
 
-    channelCount--;
-    console.log(channelCount);
+    current_channel--;
+    console.log(current_channel);
     checkChannel();
 
 };
