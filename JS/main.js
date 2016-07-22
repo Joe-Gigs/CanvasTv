@@ -1,4 +1,4 @@
-var enabled = true;
+var enabled = false;
 var channelCount; 
 
 window.onload = function() {
@@ -12,14 +12,19 @@ window.onload = function() {
 function draw() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-    channelCount = 0;
-
+    var current_channel = document.getElementById('select').value
+    current_channel = 0;
+    enabled = true;
+    var x = document.getElementById('up');
+    var y = document.getElementById('down');
+    y.disabled = false;
+    x.disabled = false;
     if (enabled == true){
     canvas.style.backgroundColor = "white";
     document.getElementById('greet').innerHTML = "Welcome";
     static();
     loop();
-    console.log(channelCount);
+    console.log(current_channel);
     } else {
         canvas.style.backgroundColor = "black";
     }
@@ -58,8 +63,7 @@ function loop() {
 function checkChannel() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-    var current_channel = document.getElementById('select').value;
-
+    var current_channel = document.getElementById('select').value
 
     switch (current_channel) {
         case '1':
@@ -109,6 +113,10 @@ function checkChannel() {
 function turnOff() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
+    var x = document.getElementById('up');
+    var y = document.getElementById('down')
+    x.disabled = true;
+    y.disabled = true;
 
     canvas.style.backgroundColor = 'black';
     canvas.style.backgroundImage = "";
@@ -117,22 +125,21 @@ function turnOff() {
 };
 
 function channelUp() {
-    var current_channel = channelCount;
+    var current_channel = document.getElementById('select').value
 
     current_channel++;
     console.log(current_channel);
-    checkChannel();
+    // checkChannel();
 
 };
 
 function channelDown() {
-    var current_channel = channelCount;
+    var current_channel = document.getElementById('select').value
 
     current_channel--;
     console.log(current_channel);
-    checkChannel();
+    // checkChannel();
 
-};
-
+};  
 
 
