@@ -1,41 +1,58 @@
 var enabled = false;
-var counter; 
+var current_channel;
+var newValue;
 
 window.onload = function() {
+    var current_channel = document.getElementById('select').value;
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
 
     canvas.style.backgroundColor = "black";
     document.getElementById('greet').innerHTML = "Off :(";
-    channelUpDown(); 
+
 };
 
 function draw() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-    // var current_channel = document.getElementById('select').value
-    counter = 0;
-    console.log(counter);
+    var current_channel = document.getElementById('select').value;
     enabled = true;
+    current_channel = 0;
+    console.log(current_channel);
+    var w = document.getElementById('select');
     var x = document.getElementById('up');
     var y = document.getElementById('down');
     var z = document.getElementById('remember');
-    z.disabled = false;
-    y.disabled = false;
+    w.disabled = false;
     x.disabled = false;
-    if (enabled == true){
-    canvas.style.backgroundColor = "white";
-    document.getElementById('greet').innerHTML = "Welcome";
-    static();
-    loop();
-    // console.log(current_channel);
+    y.disabled = false;
+    z.disabled = false;
+
+    if (enabled == true) {
+        canvas.style.backgroundColor = "white";
+        document.getElementById('greet').innerHTML = "Welcome";
+        static();
+        loop();
+        // console.log(current_channel);
     } else {
         canvas.style.backgroundColor = "black";
     }
     var check = document.getElementById('remember');
-    check.addEventListener('click', function(){
+    check.addEventListener('click', function() {
         checkChannel();
-    }) 
+    })
+
+    var up = document.getElementById('up');
+    up.addEventListener('click', function() {
+        // alert('oi it fuckin works')
+        channelUp();
+    })
+
+    var down = document.getElementById('down');
+    down.addEventListener('click', function() {
+        // alert('fucking works m8')
+        channelDown();
+    })
 };
 
 function static() {
@@ -67,47 +84,44 @@ function loop() {
     static(ctx);
     requestAnimationFrame(loop);
 };
+
 //Will render different things on canvas depending on the channel the user is on
 function checkChannel() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-    var current_channel = document.getElementById('select').value; //takes in channel input//
+    var current_channel = document.getElementById('select').value //takes in channel input//
+    var newValue = parseInt(current_channel); //convert string to integer
 
-       switch(current_channel) {
-        case '1':
+    switch (newValue) {
+        case 1:
+            console.log(current_channel);
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'yellow';
-            counter = '1';
-            console.log(counter);
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
-        case '2':
+        case 2:
+            console.log(current_channel);
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'blue';
-            counter = '2';
-            console.log(counter);
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
-        case '3':
+        case 3:
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'red';
             canvas.style.color = 'black';
-            counter = 3;
-            console.log(counter);
+            console.log(current_channel);
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
-        case '4':
+        case 4:
             canvas.style.backgroundColor = 'black';
             canvas.style.backgroundImage = "url('IMG/01.gif')";
-            counter = 4;
-            console.log(counter);
-            document.getElementById('greet').innerHTML = "A E S T H E T I C S "; 
+            console.log(current_channel);
+            document.getElementById('greet').innerHTML = "A E S T H E T I C S ";
             break
-        case '5':
-            canvas.style.backgroundColor = null
+        case 5:
+            canvas.style.backgroundColor = ""
             canvas.style.backgroundImage = "url('IMG/jtrain.jpg')";
-            counter = 5;
-            console.log(counter);
+            console.log(current_channel);
             break;
         default:
             document.getElementById('greet').innerHTML = ":D";
@@ -117,10 +131,12 @@ function checkChannel() {
 function turnOff() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
+    var w = document.getElementById('select');
     var x = document.getElementById('up');
     var y = document.getElementById('down')
     var z = document.getElementById('remember');
 
+    w.disabled = true;
     x.disabled = true;
     y.disabled = true;
     z.disabled = true;
@@ -128,22 +144,17 @@ function turnOff() {
     canvas.style.backgroundColor = 'black';
     canvas.style.backgroundImage = "";
     document.getElementById('greet').innerHTML = "Off :(";
-
 };
 
-function channelUpDown() {
+function channelUp() {
+    var canvas = document.getElementById('myCanvas');
     var current_channel = document.getElementById('select').value;
-    var channel_up = document.getElementById('up');
-     channel_up.addEventListener('click', function(){
-        current_channel++;
-        console.log(current_channel);
-    }, false);
+    var newValue = parseInt(current_channel);
+  
+};
 
-    var channel_down = document.getElementById('down');
-    channel_down.addEventListener('click', function(){
-        current_channel--;
-        console.log(current_channel);
-    }, false);
-};  
-
-
+function channelDown() {
+    var canvas = document.getElementById('myCanvas');
+    var current_channel = document.getElementById('select').value;
+    var newValue = parseInt(current_channel);
+};
