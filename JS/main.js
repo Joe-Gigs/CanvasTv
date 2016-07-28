@@ -16,6 +16,7 @@ function draw() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
     var current_channel = document.getElementById('select').value;
+    // var newValue = parseInt(current_channel);
     enabled = true;
     current_channel = 0;
     console.log(current_channel);
@@ -94,13 +95,13 @@ function checkChannel() {
 
     switch (newValue) {
         case 1:
-            console.log(current_channel);
+            // console.log(current_channel);
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'yellow';
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case 2:
-            console.log(current_channel);
+            // console.log(current_channel);
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'blue';
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
@@ -109,13 +110,13 @@ function checkChannel() {
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'red';
             canvas.style.color = 'black';
-            console.log(current_channel);
+            // console.log(current_channel);
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case 4:
             canvas.style.backgroundColor = 'black';
             canvas.style.backgroundImage = "url('IMG/01.gif')";
-            console.log(current_channel);
+            // console.log(current_channel);
             document.getElementById('greet').innerHTML = "A E S T H E T I C S ";
             break
         case 5:
@@ -147,14 +148,22 @@ function turnOff() {
 };
 
 function channelUp() {
-    var canvas = document.getElementById('myCanvas');
-    var current_channel = document.getElementById('select').value;
-    var newValue = parseInt(current_channel);
-  
+    // var canvas = document.getElementById('myCanvas');
+    var current_channel = document.getElementById('select').value; // current value
+    console.log(current_channel + " old")
+    var newValue = parseInt(current_channel); 
+    var vv = newValue + 1;
+    console.log(vv + " new")
+    document.getElementById('select').value = vv;
+    checkChannel();
 };
 
 function channelDown() {
-    var canvas = document.getElementById('myCanvas');
-    var current_channel = document.getElementById('select').value;
+    // var canvas = document.getElementById('myCanvas');
+    var current_channel = document.getElementById('select').value; // current value
     var newValue = parseInt(current_channel);
+    var yy = newValue - 1;
+    console.log(yy + " new")
+    document.getElementById('select').value = yy;
+    checkChannel();
 };
