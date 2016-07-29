@@ -9,7 +9,6 @@ window.onload = function() {
 
     canvas.style.backgroundColor = "black";
     document.getElementById('greet').innerHTML = "Off";
-
 };
 
 function draw() {
@@ -125,7 +124,7 @@ function checkChannel() {
         case 5:
             canvas.style.backgroundColor = ""
             canvas.style.backgroundImage = "url('IMG/jtrain.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/j-train-remixes/1711453>J Train Remixes(Del Sol Music)</a>"
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/j-train-remixes/1711453>J Train Remixes (Del Sol Music)</a>"
             break;
         default:
             document.getElementById('greet').innerHTML = "empty";
@@ -137,8 +136,6 @@ function turnOff() {
     var ctx = canvas.getContext('2d');
     var current_channel = document.getElementById('select').value;
     var newValue = parseInt(current_channel); 
-
-
     var u = document.getElementById('turn_on');
     var w = document.getElementById('select');
     var x = document.getElementById('up');
@@ -150,14 +147,14 @@ function turnOff() {
     x.disabled = true;
     y.disabled = true;
     z.disabled = true;
-
     x.style.color = "white";
     y.style.color = 'white';
 
+    // document.getElementById('select').value = 0;
 
     canvas.style.backgroundColor = 'black';
     canvas.style.backgroundImage = "";
-    document.getElementById('greet').innerHTML = "Off :(";
+    document.getElementById('greet').innerHTML = "Off";
 };
 
 function channelUp() {
