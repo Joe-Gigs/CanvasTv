@@ -26,14 +26,59 @@ html{
 
 #select {
 	width: 20px;
+	color: #00a601;
+	background-color: #A5BE00;
 }
 
-#tvControl{
+#turn_on {
+  background-color: #2ecc71;
+  color: white;
+}
+
+#turn_on:hover {
+  background-color: #48E68B;
+}
+
+#turn_off {
+	background-color: #55acee;
+	color: white;
+}
+
+#turn_off:hover {
+	 background-color: #6FC6FF;
+}
+
+#remember {
+	background-color: #e74c3c;
+  	color: white;
+
+}
+#remember:hover {
+	 background-color: #FF6656;
+}
+
+#up {
+	background-color: black;
+}
+
+#down {
+	background-color: black;
+}
+
+#tvControl {
     text-align: center;
     border: 3px solid black;
     width: 600px;
     margin: 0 auto;
+    background-color: #B0BEA9;
 }
+
+a{
+	text-decoration: none;
+	color: #00a601;
+}
+
+
 
 
 

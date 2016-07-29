@@ -8,26 +8,32 @@ window.onload = function() {
     var ctx = canvas.getContext('2d');
 
     canvas.style.backgroundColor = "black";
-    document.getElementById('greet').innerHTML = "Off :(";
+    document.getElementById('greet').innerHTML = "Off";
 
 };
 
 function draw() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-    var current_channel = document.getElementById('select').value;
+    var current_channel = document.getElementById('select').value || 0;
     // var newValue = parseInt(current_channel);
     enabled = true;
     current_channel = 0;
     console.log(current_channel);
+    var u = document.getElementById('turn_on');
     var w = document.getElementById('select');
     var x = document.getElementById('up');
     var y = document.getElementById('down');
     var z = document.getElementById('remember');
+
+    u.style.color = "#900";
     w.disabled = false;
     x.disabled = false;
     y.disabled = false;
     z.disabled = false;
+
+    x.style.color = "#00a601";
+    y.style.color = '#00a601';
 
     if (enabled == true) {
         canvas.style.backgroundColor = "white";
@@ -45,13 +51,11 @@ function draw() {
 
     var up = document.getElementById('up');
     up.addEventListener('click', function() {
-        // alert('oi it fuckin works')
         channelUp();
     })
 
     var down = document.getElementById('down');
     down.addEventListener('click', function() {
-        // alert('fucking works m8')
         channelDown();
     })
 };
@@ -90,18 +94,19 @@ function loop() {
 function checkChannel() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
-    var current_channel = document.getElementById('select').value //takes in channel input//
+    var current_channel = document.getElementById('select').value || 0;
     var newValue = parseInt(current_channel); //convert string to integer
 
     switch (newValue) {
+        case 0:
+            draw();
+            break;
         case 1:
-            // console.log(current_channel);
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'yellow';
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case 2:
-            // console.log(current_channel);
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'blue';
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
@@ -110,37 +115,45 @@ function checkChannel() {
             canvas.style.backgroundImage = "";
             canvas.style.backgroundColor = 'red';
             canvas.style.color = 'black';
-            // console.log(current_channel);
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case 4:
             canvas.style.backgroundColor = 'black';
             canvas.style.backgroundImage = "url('IMG/01.gif')";
-            // console.log(current_channel);
             document.getElementById('greet').innerHTML = "A E S T H E T I C S ";
             break
         case 5:
             canvas.style.backgroundColor = ""
             canvas.style.backgroundImage = "url('IMG/jtrain.jpg')";
-            console.log(current_channel);
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/j-train-remixes/1711453>J Train Remixes(Del Sol Music)</a>"
             break;
         default:
-            document.getElementById('greet').innerHTML = ":D";
+            document.getElementById('greet').innerHTML = "empty";
     }
 };
 
 function turnOff() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
+    var current_channel = document.getElementById('select').value;
+    var newValue = parseInt(current_channel); 
+
+
+    var u = document.getElementById('turn_on');
     var w = document.getElementById('select');
     var x = document.getElementById('up');
     var y = document.getElementById('down')
     var z = document.getElementById('remember');
 
+    u.style.color = "white";
     w.disabled = true;
     x.disabled = true;
     y.disabled = true;
     z.disabled = true;
+
+    x.style.color = "white";
+    y.style.color = 'white';
+
 
     canvas.style.backgroundColor = 'black';
     canvas.style.backgroundImage = "";
@@ -148,22 +161,17 @@ function turnOff() {
 };
 
 function channelUp() {
-    // var canvas = document.getElementById('myCanvas');
-    var current_channel = document.getElementById('select').value; // current value
-    console.log(current_channel + " old")
+    var current_channel = document.getElementById('select').value || 0; // current value
     var newValue = parseInt(current_channel); 
     var vv = newValue + 1;
-    console.log(vv + " new")
     document.getElementById('select').value = vv;
     checkChannel();
 };
 
 function channelDown() {
-    // var canvas = document.getElementById('myCanvas');
     var current_channel = document.getElementById('select').value; // current value
     var newValue = parseInt(current_channel);
     var yy = newValue - 1;
-    console.log(yy + " new")
     document.getElementById('select').value = yy;
     checkChannel();
 };
