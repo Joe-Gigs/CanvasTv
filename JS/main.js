@@ -120,11 +120,26 @@ function checkChannel() {
             canvas.style.backgroundColor = 'black';
             canvas.style.backgroundImage = "url('IMG/01.gif')";
             document.getElementById('greet').innerHTML = "A E S T H E T I C S ";
-            break
+            break;
         case 5:
-            canvas.style.backgroundColor = ""
+            canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/jtrain.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/j-train-remixes/1711453>J Train Remixes (Del Sol Music)</a>"
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/j-train-remixes/1711453>J Train Remixes (Del Sol Music)</a>";
+            break;
+        case 6:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/pulse6.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-6-deep-electronic-lounge-collection/1771097>Pulse Volume 6 (Mareld)</a";
+            break;
+        case 7:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/techhousebomb.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/tech-house-bombs-vol-1/1718276>Tech House Bombs Volume 1 (Del Sol Music)</a>";
+            break;
+        case 8:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/roof.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/rooftop-city-ep/1591461>Rooftop City (Del Sol Music)</a>";
             break;
         default:
             document.getElementById('greet').innerHTML = "empty";
