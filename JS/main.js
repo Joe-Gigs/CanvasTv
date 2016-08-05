@@ -43,6 +43,7 @@ function draw() {
     } else {
         canvas.style.backgroundColor = "black";
     }
+
     var check = document.getElementById('remember');
     check.addEventListener('click', function() {
         checkChannel();
@@ -111,10 +112,10 @@ function checkChannel() {
             document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
             break;
         case 3:
-            canvas.style.backgroundImage = "";
-            canvas.style.backgroundColor = 'red';
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/escape.jpg')";
             canvas.style.color = 'black';
-            document.getElementById('greet').innerHTML = "You are viewing channel " + current_channel;
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/shadows/1587022>Shadows (Mareld)</a>";
             break;
         case 4:
             canvas.style.backgroundColor = 'black';
@@ -141,6 +142,51 @@ function checkChannel() {
             canvas.style.backgroundImage = "url('IMG/roof.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/rooftop-city-ep/1591461>Rooftop City (Del Sol Music)</a>";
             break;
+        case 9:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/pulse5.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-5/1587013>Pulse 5 (Mareld)</a>";
+            break;
+        case 10:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/alchemy.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/alchemy/1546404>Alchemy (Mareld)</a>";
+            break;
+        case 11:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/mareld101.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/mareld-101-selections-from-100-releases-2009-2015/1464816>Mareld 101</a>";
+            break;
+        case 12:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/gradient.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/gradient/1402039>Gradient (Mareld)</a>";
+            break;
+        case 13:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/snow.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/thundersnow/1345386>Thundersnow (Mareld)</a>";
+            break;
+        case 14:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/pulse4.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-4-groovy-deep-house-for-the-perfect-lounge/1345489>Pulse 4 (Mareld)</a>";
+            break;
+        case 15:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/pulse3.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-3-the-deep-house-groove-collection/1228080>Pulse 3 (Mareld)</a>";
+            break;
+        case 16:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/clouds.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/little-clouds/1187199>Little Clouds (Mareld)</a>";
+            break;
+        case 17:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/hurricane.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/hurricane/1124770>Hurricane (Mareld)</a>";
+            break;
         default:
             document.getElementById('greet').innerHTML = "empty";
     }
@@ -154,7 +200,7 @@ function turnOff() {
     var u = document.getElementById('turn_on');
     var w = document.getElementById('select');
     var x = document.getElementById('up');
-    var y = document.getElementById('down')
+    var y = document.getElementById('down');
     var z = document.getElementById('remember');
 
     u.style.color = "white";
