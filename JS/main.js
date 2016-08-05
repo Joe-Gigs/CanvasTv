@@ -35,7 +35,7 @@ function draw() {
     y.style.color = '#00a601';
 
     if (enabled == true) {
-        canvas.style.backgroundColor = "grey";
+        canvas.style.backgroundColor = "#6a6a66";
         document.getElementById('greet').innerHTML = "Welcome";
         static();
         loop();
