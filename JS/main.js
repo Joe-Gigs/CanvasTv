@@ -35,7 +35,7 @@ function draw() {
     y.style.color = '#00a601';
 
     if (enabled == true) {
-        canvas.style.backgroundColor = "white";
+        canvas.style.backgroundColor = "grey";
         document.getElementById('greet').innerHTML = "Welcome";
         static();
         loop();
@@ -71,7 +71,7 @@ function static() {
         i = 0;
 
     for (i; i < len; i++)
-        if (Math.random() < 0.5) buffer32[i] = 0xff000000;
+        if (Math.random() < 0.1) buffer32[i] = 0xff000000;
 
     ctx.putImageData(idata, 0, 0);
 };
@@ -203,15 +203,16 @@ function turnOff() {
     var y = document.getElementById('down');
     var z = document.getElementById('remember');
 
-    u.style.color = "white";
     w.disabled = true;
     x.disabled = true;
     y.disabled = true;
     z.disabled = true;
+
+    u.style.color = "white";
     x.style.color = "white";
     y.style.color = 'white';
 
-    // document.getElementById('select').value = 0;
+    newValue = 0;
 
     canvas.style.backgroundColor = 'black';
     canvas.style.backgroundImage = "";
