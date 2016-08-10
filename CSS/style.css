@@ -102,19 +102,31 @@ body {
 	margin: 0 auto;
 	background-color: ##fff97f;
 	background: linear-gradient(#665923, #fff97f);
-	opacity: 0.9;
+	opacity: 0.4;
     filter: Alpha(opacity=50);
 	-webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera  */
     transform: rotateX(20deg);
 }
 
-.windowParent {
-
-
+.leftWindowParent {
+	height: 175px;
+    width: 160px;
+    margin: 25px;
+    text-align: center;
+    margin-top: -473px;
+    border: solid 1px #616757;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(60deg);
+	 opacity: 0.8;
+    background-image: url("city.jpg");
+  	background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-.windowChild {
+.leftWindowChild {
 	
 }
+
+
 
 
