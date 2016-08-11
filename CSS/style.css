@@ -10,7 +10,7 @@ canvas {
 #greet {
 	width: 500px;
 	height: 30px;
-	border: 1px solid white;
+	border: 1px solid #0a0a0a;
 	padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
@@ -21,7 +21,7 @@ canvas {
 }
 
 #myCanvas {
-	border: 10px solid grey;
+	border: 10px solid #0a0a0a;
 	padding: 0;
     margin: auto;
     display: block;
@@ -90,14 +90,14 @@ body {
     background-color: #191919;
 }
 
-.lightParent {
+#lightParent {
 	width: 100%;
 	height: 50px;
 	perspective: 90px;
 	border: 1px solid #191919;
 }
 
-.lightChild {
+#lightChild {
 	width: 600px;	
 	height: 80px;
 	margin: 0 auto;
@@ -105,9 +105,10 @@ body {
 	background: linear-gradient(#665923, #fff97f,#191919);
 	opacity: 0.4;
     filter: Alpha(opacity=50);
-	-webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera  */
+	-webkit-transform: rotateX(45deg); 
     transform: rotateX(20deg);
-}
+    display: none;
+}	
 
 .leftWindowParent {
 	height: 175px;
@@ -129,10 +130,10 @@ body {
 */	margin-top: 190px;
 	height: 350px;
 	margin-right: 50px;
-	width: 375px;
+	width: 380px;
 	background-color: #161616;
 	background: linear-gradient(#191919,#161616,#161615,#161616,#191919 );
-	opacity: 0.4;
+	opacity: 0.6;
 	perspective: 20px;
 }
 

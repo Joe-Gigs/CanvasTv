@@ -26,12 +26,15 @@ function draw() {
     var x = document.getElementById('up');
     var y = document.getElementById('down');
     var z = document.getElementById('remember');
+    var zz = document.getElementById('lightChild');
 
     u.style.color = "#900";
     w.disabled = false;
     x.disabled = false;
     y.disabled = false;
     z.disabled = false;
+
+    zz.style.display = "block";
 
     x.style.color = "#00a601";
     y.style.color = '#00a601';
@@ -75,7 +78,7 @@ function static() {
         i = 0;
 
     for (i; i < len; i++)
-        if (Math.random() < 0.1) buffer32[i] = 0xff000000;
+        if (Math.random() < 0.1) buffer32[i] = '0xff000000';
 
     ctx.putImageData(idata, 0, 0);
 
@@ -213,11 +216,15 @@ function turnOff() {
     var x = document.getElementById('up');
     var y = document.getElementById('down');
     var z = document.getElementById('remember');
+    var zz = document.getElementById('lightChild');
+
 
     w.disabled = true;
     x.disabled = true;
     y.disabled = true;
     z.disabled = true;
+    zz.style.display = "none";
+
 
     u.style.color = "white";
     x.style.color = "white";
