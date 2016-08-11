@@ -57,6 +57,7 @@ canvas {
   	color: white;
 
 }
+
 #remember:hover {
 	 background-color: #FF6656;
 }
@@ -100,8 +101,8 @@ body {
 	width: 600px;	
 	height: 80px;
 	margin: 0 auto;
-	background-color: ##fff97f;
-	background: linear-gradient(#665923, #fff97f);
+	background-color: #fff97f;
+	background: linear-gradient(#665923, #fff97f,#191919);
 	opacity: 0.4;
     filter: Alpha(opacity=50);
 	-webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera  */
@@ -116,15 +117,23 @@ body {
     margin-top: -473px;
     border: solid 1px #616757;
     -webkit-transform-style: preserve-3d;
-    -webkit-transform: rotateY(60deg);
-	 opacity: 0.8;
+    -webkit-transform: rotateY(65deg);
+	opacity: 0.8;
     background-image: url("city.jpg");
   	background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .leftWindowChild {
-	
+/*	border: 3px dotted yellow;
+*/	margin-top: 190px;
+	height: 350px;
+	margin-right: 50px;
+	width: 375px;
+	background-color: #161616;
+	background: linear-gradient(#191919,#161616,#161615,#161616,#191919 );
+	opacity: 0.4;
+	perspective: 20px;
 }
 
 
