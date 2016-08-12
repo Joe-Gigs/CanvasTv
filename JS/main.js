@@ -1,3 +1,6 @@
+//Portfolio site v0.0.1
+//Joe Gigs
+
 var enabled = false;
 var current_channel;
 var newValue;
