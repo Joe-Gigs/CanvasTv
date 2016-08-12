@@ -10,11 +10,9 @@ canvas {
 #greet {
 	width: 500px;
 	height: 30px;
-	border: 1px solid white;
+	border: 1px solid #0a0a0a;
 	padding-left: 0;
     padding-right: 0;
-    /*margin-left: auto;
-    margin-right: auto;*/
     margin: 0 auto;
 	background-color: black;
 	color: #00a601;
@@ -23,12 +21,11 @@ canvas {
 }
 
 #myCanvas {
-	border: 10px solid grey;
+	border: 10px solid #0a0a0a;
 	padding: 0;
     margin: auto;
     display: block;
     -webkit-transform: rotateX(-2deg);
-
 }
 
 #select {
@@ -60,6 +57,7 @@ canvas {
   	color: white;
 
 }
+
 #remember:hover {
 	 background-color: #FF6656;
 }
@@ -92,45 +90,53 @@ body {
     background-color: #191919;
 }
 
-.tableParent {
+#lightParent {
 	width: 100%;
 	height: 50px;
 	perspective: 90px;
 	border: 1px solid #191919;
 }
 
-.tableChild {
+#lightChild {
 	width: 600px;	
 	height: 80px;
 	margin: 0 auto;
-	background-color: #6e3f25;
-	background: linear-gradient(#665923, #332a06);
-	opacity: 0.6;
+	background-color: #fff97f;
+	background: linear-gradient(#665923, #fff97f,#191919);
+	opacity: 0.4;
     filter: Alpha(opacity=50);
-	-webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera  */
+	-webkit-transform: rotateX(45deg); 
     transform: rotateX(20deg);
-}
-
-.cigs {
-	width: 30px;
-	height: 35px;
-	border: 1px solid white;
-	background-color: white;
-	margin: 0 auto;
-    box-shadow: 10px 3px 5px #080701;
-
-}
-
-.redLabel {
-	width: 30px;
-	height: 15px;
-	background-color: red;
-}
+    display: none;
+}	
 
 .leftWindowParent {
-
+	height: 175px;
+    width: 160px;
+    margin: 25px;
+    text-align: center;
+    margin-top: -473px;
+    border: solid 1px #616757;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(65deg);
+	opacity: 0.8;
+    background-image: url("city.jpg");
+  	background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .leftWindowChild {
-
+/*	border: 3px dotted yellow;
+*/	margin-top: 190px;
+	height: 350px;
+	margin-right: 50px;
+	width: 380px;
+	background-color: #161616;
+	background: linear-gradient(#191919,#161616,#161615,#161616,#191919 );
+	opacity: 0.6;
+	perspective: 20px;
 }
+
+
+
+
