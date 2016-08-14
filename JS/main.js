@@ -221,13 +221,11 @@ function turnOff() {
     var z = document.getElementById('remember');
     var zz = document.getElementById('lightChild');
 
-
     w.disabled = true;
     x.disabled = true;
     y.disabled = true;
     z.disabled = true;
     zz.style.display = "none";
-
 
     u.style.color = "white";
     x.style.color = "white";
@@ -245,13 +243,28 @@ function channelUp() {
     var newValue = parseInt(current_channel); 
     var vv = newValue + 1;
     document.getElementById('select').value = vv;
+
+    if (current_channel == 18){
+        alert('ayy');
+        restartChannels();
+    }
     checkChannel();
 };
 
 function channelDown() {
-    var current_channel = document.getElementById('select').value; // current value
+    var current_channel = document.getElementById('select').value || 0; // current value
     var newValue = parseInt(current_channel);
+
+    if (newValue > 0){
     var yy = newValue - 1;
     document.getElementById('select').value = yy;
+    }
     checkChannel();
 };
+
+function restartChannels() {
+    var current_channel = document.getElementById('select').value;
+    var newValue = parseInt(current_channel);
+
+    newValue.innerHTML = 0;
+}

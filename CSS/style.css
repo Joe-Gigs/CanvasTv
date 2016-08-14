@@ -126,8 +126,7 @@ body {
 }
 
 .leftWindowChild {
-/*	border: 3px dotted yellow;
-*/	margin-top: 190px;
+	margin-top: 190px;
 	height: 350px;
 	margin-right: 50px;
 	width: 380px;
@@ -136,6 +135,28 @@ body {
 	opacity: 0.6;
 	perspective: 20px;
 }
+
+/*.rightWindowParent {
+	height: 175px;
+    width: 160px;
+    margin: 25px;
+    border: solid 1px red;
+    margin-top: -473px;
+    margin-left: 490px;
+    -webkit-transform: rotateY(30deg);
+
+}
+
+.rightWindowChild {
+	margin-top: 500px;
+	height: 350px;
+	margin-left: 605px;
+	width: 305px;
+	background-color: #161616;
+	background: linear-gradient(#191919,#161616,#161615,#161616,#191919 );
+	opacity: 0.6;
+	perspective: 20px;
+}*/
 
 
 
