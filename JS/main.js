@@ -151,59 +151,94 @@ function checkChannel() {
             break;
         case 7:
             canvas.style.backgroundColor = "";
-            canvas.style.backgroundImage = "url('IMG/techhousebomb.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/tech-house-bombs-vol-1/1718276>Tech House Bombs Volume 1 (Del Sol Music)</a>";
+            canvas.style.backgroundImage = "url('IMG/jtrain.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/j-train-remixes/1711453>J Train Remixes (Del Sol Music)</a>";
             break;
         case 8:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/pulse6.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-6-deep-electronic-lounge-collection/1771097>Pulse Volume 6 (Mareld)</a>";
+            break;
+        case 9:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/techhousebomb.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/tech-house-bombs-vol-1/1718276>Tech House Bombs (Del Sol Music)</a>";
+            break;
+        case 10:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/roof.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/rooftop-city-ep/1591461>Rooftop City (Del Sol Music)</a>";
             break;
-        case 9:
+        case 11:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/escape.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/escape-from-paradise/1596358>Escape from Paradise (Mareld)</a>";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/escape-from-paradise/1596358>Escape From Paradise (Mareld)</a>";
             break;
-        case 10:
+        case 12:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/shadows.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/shadows/1587022>Shadows (Mareld)</a>";
             break;
-        case 11:
+        case 13:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/pulse5.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-5/1587013>Pulse 5 (Mareld)</a>";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-5/1587013>Pulse Volume 5 (Mareld)</a>";
             break;
-        case 12:
+        case 14:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/alchemy.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/alchemy/1546404>Alchemy (Mareld)</a>";
             break;
-        case 13:
+        case 15:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/mareld101.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/mareld-101-selections-from-100-releases-2009-2015/1464816>Mareld 101</a>";
             break;
-        case 14:
+        case 16:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/reinvent.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/mechanist-reinventions-ii/1431182>Mechanist Reinventions (Mareld)</a>";
+            break;
+        case 17:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/gradient.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/gradient/1402039>Gradient (Mareld)</a>";
+            break;
+        case 18:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/snow.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/thundersnow/1345386>Thundersnow (Mareld)</a>";
+            break;
+        case 19:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/pulse4.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-4-groovy-deep-house-for-the-perfect-lounge/1345489>Pulse 4 (Mareld)</a>";
             break;
-        case 15:
+        case 20:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/pulse3.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-3-the-deep-house-groove-collection/1228080>Pulse 3 (Mareld)</a>";
             break;
-        case 16:
+        case 21:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/clouds.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/little-clouds/1187199>Little Clouds (Mareld)</a>";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/little-clouds/1187199>Little Clouds(Mareld)</a>";
             break;
-        case 17:
+        case 22:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/pulse2.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-2/1120979>Pulse Volume 2(Mareld)</a>";
+            break;
+        case 23:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/hurricane.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/hurricane/1124770>Hurricane (Mareld)</a>";
             break;
+        case 24:
+            canvas.style.backgroundColor = "";
+            canvas.style.backgroundImage = "url('IMG/kore.jpg')";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/kore-punk-ep/1124818>Kore Punk (Mareld)</a>";
+            break;        
         default:
             document.getElementById('greet').innerHTML = "empty";
     }
@@ -245,7 +280,7 @@ function channelUp() {
     document.getElementById('select').value = vv;
 
     if (current_channel == 18){
-        alert('ayy');
+        // alert('ayy');
         restartChannels();
     }
     checkChannel();
