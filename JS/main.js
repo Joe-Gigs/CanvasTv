@@ -11,7 +11,7 @@ window.onload = function() {
 
     canvas.style.backgroundColor = "black";
     document.getElementById('greet').innerHTML = "Off";
-    makeItRain();
+    makeItRain(); //$$$$///
 };
 
 function draw() {
@@ -38,7 +38,6 @@ function draw() {
     z.disabled = false;
 
     zz.style.display = "block";
-
     x.style.color = "#00a601";
     y.style.color = '#00a601';
 
@@ -302,7 +301,7 @@ function channelDown() {
     checkChannel();
 };
 
-var rainDrops = 50;
+var rainDrops = 75;
 
 function randomDrops(minNum, maxNum) {
   return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);

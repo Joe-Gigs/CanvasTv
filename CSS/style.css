@@ -86,15 +86,17 @@ a {
 body {
     -webkit-perspective: 10px;
     perspective: 950px;
-    background-color: #191919;
+    background-color: #171717;
+	background: linear-gradient(to left,#0b0b0b,#101010,#171717);
+
 }
 
 #lightParent {
 	width: 100%;
 	height: 50px;
 	perspective: 90px;
-	border: 1px solid #191919;
-}
+/*	border: 1px solid #171717;
+*/}
 
 #lightChild {
 	width: 600px;	
@@ -103,6 +105,7 @@ body {
 	background-color: #ffe57f;
 	background: linear-gradient(#665923, #fff67f,#191519);
 	opacity: 0.4;
+	border-radius: 10px;
     filter: Alpha(opacity=100);
 	-webkit-transform: rotateX(45deg); 
     transform: rotateX(20deg);
@@ -119,36 +122,42 @@ body {
     -webkit-transform-style: preserve-3d;
     -webkit-transform: rotateY(70deg);
 	opacity: 0.3;	
-	background-color: #573fd2;
+	background-color: #3c2c93;
 }
 
 .drop {
-  	background-color: #191919;
+  	background-color: #171717;
 	width:1px;
-	height:50px;
+	height:25px;
 	position: absolute;
 	bottom:20px;
 	-webkit-animation: fall .63s linear infinite;
   -moz-animation: fall .63s linear infinite;
 }
 
-/* animate the drops*/
+/* animates the drops*/
 @-webkit-keyframes fall {
-	to {margin-top:200px;}
-}
-@-moz-keyframes fall {
-	to {margin-top:900px;}
+	to {margin-top:190px;}
 }
 
-/*.leftWindowChild {
+@-moz-keyframes fall {
+	to {margin-top:190px;}
+}
+
+.leftWindowChild {
 	margin-top: 190px;
-	height: 350px;
+	height: 300px;
 	margin-right: 50px;
-	width: 380px;
-	background-color: #161616;
-	background: linear-gradient(#191919,#161616,#161615,#161616,#191919 );
-	opacity: 0.6;
-	perspective: 20px;
+	width: 400px;
+	background-color: #2a2a2a;
+	background: linear-gradient(to right,#1d1d1d,#212121,#202020,#1c1c1c,#171717);
+	opacity: 0.3;
+	border-radius: 15px;
+}
+
+/*.room {
+	background-color: #171717;
+	height: 100%;
 }*/
 
 /*.rightWindowParent {
