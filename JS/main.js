@@ -1,6 +1,5 @@
 //Portfolio site v0.0.1
 //Joe Gigs
-
 var enabled = false;
 var current_channel;
 var newValue;
@@ -85,17 +84,17 @@ function static() {
 
     ctx.putImageData(idata, 0, 0);
 
-//     var startTime = new Date().getTime();
-//     var interval = setInterval(function(){
-//         // timesRun += 1;
-//         if(new Date().getTime() - startTime > 60000){
-//         clearInterval(interval);
-//         return;
-//         }
-//         canvas.style.backgroundColor = 'black';
-//         // canvas.style.backgroundImage = "";
-//     },2000)
- };
+    //     var startTime = new Date().getTime();
+    //     var interval = setInterval(function(){
+    //         // timesRun += 1;
+    //         if(new Date().getTime() - startTime > 60000){
+    //         clearInterval(interval);
+    //         return;
+    //         }
+    //         canvas.style.backgroundColor = 'black';
+    //         // canvas.style.backgroundImage = "";
+    //     },2000)
+};
 
 var toggle = true;
 
@@ -118,13 +117,13 @@ function checkChannel() {
     var current_channel = document.getElementById('select').value || 0;
     var newValue = parseInt(current_channel); //convert string to integer
 
-    switch (newValue) {            
+    switch (newValue) {
         case 1:
             canvas.style.backgroundImage = "";
             canvas.style.backgroundImage = "url('IMG/Mixtscreenshot.png')";
             document.getElementById('greet').innerHTML = "<a href =https://bitbucket.org/JoeGigs/mixt>Mixt, a mixtape sharing app built in Ruby on Rails</a>";
             break;
-        case 2: 
+        case 2:
             canvas.style.backgroundImage = "";
             canvas.style.backgroundImage = "url('IMG/juno.png')";
             document.getElementById('greet').innerHTML = "<a href=https://bitbucket.org/JoeGigs/juno>Juno, a silly web game made with Phaser.js</a>";
@@ -222,12 +221,12 @@ function checkChannel() {
         case 21:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/clouds.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/little-clouds/1187199>Little Clouds(Mareld)</a>";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/little-clouds/1187199>Little Clouds (Mareld)</a>";
             break;
         case 22:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/pulse2.jpg')";
-            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-2/1120979>Pulse Volume 2(Mareld)</a>";
+            document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/pulse-vol-2/1120979>Pulse Volume 2 (Mareld)</a>";
             break;
         case 23:
             canvas.style.backgroundColor = "";
@@ -238,7 +237,7 @@ function checkChannel() {
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/kore.jpg')";
             document.getElementById('greet').innerHTML = "<a href=https://www.beatport.com/release/kore-punk-ep/1124818>Kore Punk (Mareld)</a>";
-            break;        
+            break;
         default:
             document.getElementById('greet').innerHTML = "empty";
     }
@@ -248,7 +247,7 @@ function turnOff() {
     var canvas = document.getElementById('myCanvas');
     var ctx = canvas.getContext('2d');
     var current_channel = document.getElementById('select').value;
-    var newValue = parseInt(current_channel); 
+    var newValue = parseInt(current_channel);
     var u = document.getElementById('turn_on');
     var w = document.getElementById('select');
     var x = document.getElementById('up');
@@ -274,32 +273,27 @@ function turnOff() {
 };
 
 function channelUp() {
-    var current_channel = document.getElementById('select').value || 0; // current value
-    var newValue = parseInt(current_channel); 
+    var current_channel = document.getElementById('select').value || 0;
+    var newValue = parseInt(current_channel);
     var vv = newValue + 1;
     document.getElementById('select').value = vv;
 
-    if (current_channel == 18){
+    if (current_channel >= 24) {
         // alert('ayy');
-        restartChannels();
+        vv = newValue - 23;
+        document.getElementById('select').value = vv;
     }
     checkChannel();
 };
 
 function channelDown() {
-    var current_channel = document.getElementById('select').value || 0; // current value
+    var current_channel = document.getElementById('select').value || 0;
     var newValue = parseInt(current_channel);
 
-    if (newValue > 0){
+    if (newValue > 0) {
     var yy = newValue - 1;
     document.getElementById('select').value = yy;
     }
     checkChannel();
 };
 
-function restartChannels() {
-    var current_channel = document.getElementById('select').value;
-    var newValue = parseInt(current_channel);
-
-    newValue.innerHTML = 0;
-}
