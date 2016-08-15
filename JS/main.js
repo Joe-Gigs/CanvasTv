@@ -290,9 +290,12 @@ function channelDown() {
     var current_channel = document.getElementById('select').value || 0;
     var newValue = parseInt(current_channel);
 
-    if (newValue > 0) {
+    if (current_channel > 0) {
     var yy = newValue - 1;
     document.getElementById('select').value = yy;
+    } else if (current_channel <= 24){
+        yy = newValue +24;
+        document.getElementById('select').value = yy;
     }
     checkChannel();
 };
