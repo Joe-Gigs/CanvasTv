@@ -55,7 +55,6 @@ canvas {
 #remember {
 	background-color: #e74c3c;
   	color: white;
-
 }
 
 #remember:hover {
@@ -101,10 +100,10 @@ body {
 	width: 600px;	
 	height: 80px;
 	margin: 0 auto;
-	background-color: #fff97f;
-	background: linear-gradient(#665923, #fff97f,#191919);
+	background-color: #ffe57f;
+	background: linear-gradient(#665923, #fff67f,#191519);
 	opacity: 0.4;
-    filter: Alpha(opacity=50);
+    filter: Alpha(opacity=100);
 	-webkit-transform: rotateX(45deg); 
     transform: rotateX(20deg);
     display: none;
@@ -116,16 +115,32 @@ body {
     margin: 25px;
     text-align: center;
     margin-top: -473px;
-    border: solid 1px #616757;
+    border: solid 10px #616717;
     -webkit-transform-style: preserve-3d;
-    -webkit-transform: rotateY(65deg);
-	opacity: 0.8;
-    background-image: url("city.jpg");
-  	background-size: 100% 100%;
-    background-repeat: no-repeat;
+    -webkit-transform: rotateY(70deg);
+	opacity: 0.3;	
+	background-color: #573fd2;
 }
 
-.leftWindowChild {
+.drop {
+  	background-color: #191919;
+	width:1px;
+	height:50px;
+	position: absolute;
+	bottom:20px;
+	-webkit-animation: fall .63s linear infinite;
+  -moz-animation: fall .63s linear infinite;
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+	to {margin-top:200px;}
+}
+@-moz-keyframes fall {
+	to {margin-top:900px;}
+}
+
+/*.leftWindowChild {
 	margin-top: 190px;
 	height: 350px;
 	margin-right: 50px;
@@ -134,7 +149,7 @@ body {
 	background: linear-gradient(#191919,#161616,#161615,#161616,#191919 );
 	opacity: 0.6;
 	perspective: 20px;
-}
+}*/
 
 /*.rightWindowParent {
 	height: 175px;

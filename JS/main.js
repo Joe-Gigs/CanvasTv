@@ -11,6 +11,7 @@ window.onload = function() {
 
     canvas.style.backgroundColor = "black";
     document.getElementById('greet').innerHTML = "Off";
+    makeItRain();
 };
 
 function draw() {
@@ -133,7 +134,7 @@ function checkChannel() {
             canvas.style.backgroundImage = "url('IMG/managedapps.png')";
             document.getElementById('greet').innerHTML = "<a href=http://portal.managedapps.co/>Managed Apps, a SaaS platform for mobile devs</a>";
             break;
-        case 4:
+        case 4: 
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/byteflyport.png')";
             document.getElementById('greet').innerHTML = "<a href=http://bytefly.com/portfolio/>Bytefly portfolio page</a";
@@ -255,6 +256,9 @@ function turnOff() {
     var z = document.getElementById('remember');
     var zz = document.getElementById('lightChild');
 
+    var yy = newValue - newValue;
+    document.getElementById('select').value = yy;
+
     w.disabled = true;
     x.disabled = true;
     y.disabled = true;
@@ -279,7 +283,6 @@ function channelUp() {
     document.getElementById('select').value = vv;
 
     if (current_channel >= 24) {
-        // alert('ayy');
         vv = newValue - 23;
         document.getElementById('select').value = vv;
     }
@@ -289,14 +292,30 @@ function channelUp() {
 function channelDown() {
     var current_channel = document.getElementById('select').value || 0;
     var newValue = parseInt(current_channel);
-
-    if (current_channel > 0) {
     var yy = newValue - 1;
     document.getElementById('select').value = yy;
-    } else if (current_channel <= 24){
-        yy = newValue +24;
+
+    if (current_channel <= 1) {
+        yy = newValue + 23;
         document.getElementById('select').value = yy;
     }
     checkChannel();
 };
+
+var rainDrops = 50;
+
+function randomDrops(minNum, maxNum) {
+  return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
+}
+
+function makeItRain() {
+    for( i=1;i<rainDrops;i++) {
+    var dropLeft = randomDrops(0,150);
+    var dropTop = randomDrops(-400,140);
+
+    $('.leftWindowParent').append('<div class="drop" id="drop'+i+'"></div>');
+    $('#drop'+i).css('left',dropLeft);
+    $('#drop'+i).css('top',dropTop);
+    }
+}
 
