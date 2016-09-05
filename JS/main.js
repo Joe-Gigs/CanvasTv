@@ -12,7 +12,7 @@ window.onload = function() {
     canvas.style.backgroundColor = "black";
     document.getElementById('greet').innerHTML = "Off";
     makeItRain(); //$$$$///
-};
+}; 
 
 function draw() {
     var canvas = document.getElementById('myCanvas');
@@ -133,7 +133,7 @@ function checkChannel() {
             canvas.style.backgroundImage = "url('IMG/managedapps.png')";
             document.getElementById('greet').innerHTML = "<a href=http://portal.managedapps.co/>Managed Apps, a SaaS platform for mobile devs</a>";
             break;
-        case 4: 
+        case 4:
             canvas.style.backgroundColor = "";
             canvas.style.backgroundImage = "url('IMG/byteflyport.png')";
             document.getElementById('greet').innerHTML = "<a href=http://bytefly.com/portfolio/>Bytefly portfolio page</a";
@@ -256,7 +256,7 @@ function turnOff() {
     var zz = document.getElementById('lightChild');
 
     var yy = newValue - newValue;
-    document.getElementById('select').value = yy;
+    document.getElementById('select').value = yy || 0;
 
     w.disabled = true;
     x.disabled = true;
@@ -309,6 +309,7 @@ function randomDrops(minNum, maxNum) {
 
 function makeItRain() {
     for( i=1;i<rainDrops;i++) {
+
     var dropLeft = randomDrops(0,150);
     var dropTop = randomDrops(-400,140);
 
@@ -317,4 +318,3 @@ function makeItRain() {
     $('#drop'+i).css('top',dropTop);
     }
 }
-
